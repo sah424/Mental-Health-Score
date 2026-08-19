@@ -1,0 +1,6 @@
+fast api
+uvicorn
+pydantic
+joblib
+pandas
+scikit-learn

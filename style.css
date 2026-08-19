@@ -1,0 +1,367 @@
+/* ------------------------------
+   Basic Page Setup
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #1f2937;
+
+    min-height: 100vh;
+}
+
+
+/* ------------------------------
+   Main Container
+------------------------------ */
+
+.container {
+    width: 90%;
+    max-width: 950px;
+
+    margin: 40px auto;
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f0ff;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+    color: #172554;
+}
+
+.header p {
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+/* ------------------------------
+   Form Sections
+------------------------------ */
+
+.form-section {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h2 {
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+    color: #1e3a8a;
+}
+
+
+/* ------------------------------
+   Form Grid
+------------------------------ */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ------------------------------
+   Form Inputs
+------------------------------ */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #374151;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* ------------------------------
+   Predict Button
+------------------------------ */
+
+#predictButton {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#predictButton:hover {
+    background: #1d4ed8;
+}
+
+#predictButton:disabled {
+    background: #93c5fd;
+
+    cursor: not-allowed;
+}
+
+
+/* ------------------------------
+   Loading Animation
+------------------------------ */
+
+.loader {
+    display: none;
+
+    width: 18px;
+    height: 18px;
+
+    border: 3px solid rgba(255, 255, 255, 0.5);
+
+    border-top: 3px solid white;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+
+    margin: auto;
+}
+
+.loading .loader {
+    display: block;
+}
+
+.loading #buttonText {
+    display: none;
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ------------------------------
+   Error Message
+------------------------------ */
+
+.error-message {
+    display: none;
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+}
+
+
+/* ------------------------------
+   Result Card
+------------------------------ */
+
+.result-card {
+    display: none;
+
+    background: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    border-top: 5px solid #2563eb;
+}
+
+.result-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.result-label {
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+.result-card h2 {
+    font-size: 52px;
+
+    color: #1d4ed8;
+
+    margin: 10px 0;
+}
+
+.result-description {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* ------------------------------
+   Responsive Design
+------------------------------ */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .result-card h2 {
+        font-size: 42px;
+    }
+}
