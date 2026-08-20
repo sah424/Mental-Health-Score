@@ -1,5 +1,5 @@
 // FastAPI backend URL
-const API_URL = "https://mental-health-score-edtm.onrender.com";
+const API_URL = "https://mental-health-score-edtm.onrender.com/predict";
 
 
 // Get elements from HTML
