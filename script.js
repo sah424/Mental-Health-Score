@@ -1,5 +1,5 @@
 // FastAPI backend URL
-const API_URL = "http://127.0.0.1:8000/predict";
+const API_URL = "https://mental-health-score-edtm.onrender.com";
 
 
 // Get elements from HTML
